@@ -1,24 +1,30 @@
 package com.zzj.code;
 
 import java.lang.ref.WeakReference;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
 public class Main {
 
 
+    private int a = 0;
+    private int b = 2;
+
+    public Main(int a, int b) {
+        this.a = a;
+        this.b = b;
+    }
 
 
     public static void main(String[] args) {
-        Map a = new HashMap();
-        WeakReference<Map> weakReference = new WeakReference<>(a);
-        // a 虽然被指向了null,但是如果没有触发gc垃圾回收机制，weakReference依然可以指向a的值，因为a还没有被垃圾回收
-       /* a = null;
-        System.gc();
-        System.out.println(weakReference.get());*/
-        System.gc();
-        Map b = weakReference.get();
-        System.out.println(a);
-        System.out.println(b);
+
+
+
+        Integer a = new Integer(50);
+        Main main = new Main(2,3);
+        Main main1 = new Main(2, 3);
+
+        System.out.println(main.equals(main1));
     }
 }
