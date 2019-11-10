@@ -5,7 +5,7 @@ package com.zzj.code.chapter4.q8;
  * @date 2019/11/4 11:31
  */
 public class Test {
-     
+
     public boolean VerifySquenceOfBST(int [] sequence) {
 
         if (sequence.length <= 0) {

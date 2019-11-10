@@ -17,10 +17,8 @@ public class MyTest {
 
         // 拿到头节点的值,肯定是前序遍历第一个
         int rootValue = preOrder[startPreIndex];
-        //int rootValue = preOrder[startPreIndex];
 
         BinaryTreeNode root = new BinaryTreeNode(rootValue);
-        //BinaryTreeNode root = new BinaryTreeNode(rootValue);
 
         // 判断是不是只有一个节点
         if(startPreIndex == endPreIndex) {
@@ -33,24 +31,16 @@ public class MyTest {
         }
 
 
-
         // 已经在前序遍历中拿到头节点，下一步，找到中序遍历节点的位置
         int rootInIndex = startInIndex;
-
 
         while(rootInIndex <= endInIndex && inOrder[rootInIndex] != rootValue) {
             ++rootInIndex;
         }
 
-
-
-
         if(rootInIndex == endInIndex && inOrder[rootInIndex] != rootValue) {
             throw new RuntimeException("输入异常");
         }
-
-
-
 
         // 中序节点中根节点的位置 - 中序起点位置
         int leftLength = rootInIndex - startInIndex;
@@ -59,11 +49,6 @@ public class MyTest {
         // 计算前序中属于左子树的 尾节点下标
         int leftPreOrderEndIndex = startPreIndex + leftLength;
 
-
-
-
-
-
         if(leftLength > 0) {
             // 构建左子树
             root.leftNode = ConstructCore(preOrder, startPreIndex+1, leftPreOrderEndIndex,
@@ -71,15 +56,11 @@ public class MyTest {
         }
 
 
-
-
         if(leftLength < endPreIndex - startPreIndex) {
             // 构建右子树
             root.rightNode = ConstructCore(preOrder, leftPreOrderEndIndex + 1, endPreIndex,
                                             inOrder, rootInIndex + 1, endInIndex);
         }
-
-        
         return root;
     }
 

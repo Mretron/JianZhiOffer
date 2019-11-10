@@ -26,5 +26,7 @@ public class Main {
         Main main1 = new Main(2, 3);
 
         System.out.println(main.equals(main1));
+
+        Class mainss = main.getClass();
     }
 }
