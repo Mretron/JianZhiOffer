@@ -31,8 +31,7 @@ public class Test {
         }
         if(loc==charArray.length-1)
         {
-            //递归的出口
-            tempRes.add(String.valueOf(charArray));
+            tempRes.add(String.valueOf(charArray));//递归的出口
         }
         else
         {
