@@ -22,11 +22,11 @@ public class Test3  {
             list.remove(s);
         }*/
 
-       int[] data = new int[]{1,2,3};
+    /*   int[] data = new int[]{1,2,3};
        int[] data2 =data;
        data2[0] = 9999;
         System.out.println(data[0]);
-
+*/
     }
 
 
