@@ -42,6 +42,8 @@ public class Test {
             ++nLength;
             pNode = pNode.m_pNext;
         }
+
+
         return nLength;
     }
 }

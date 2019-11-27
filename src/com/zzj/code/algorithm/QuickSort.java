@@ -7,14 +7,14 @@ package com.zzj.code.algorithm;
 public class QuickSort {
 
     public static void main(String[] args) {
-        int[] data ={2,12,34,34,56,623,21      };
+        int[] data ={2,12,34,34,56,623,21 };
         quickSort(data, 0 , data.length - 1);
         for(int temp : data) {
             System.out.print(temp + " ");
         }
     }
 
-    private static void quickSort(int[] data, int start, int end) {
+    public static void quickSort(int[] data, int start, int end) {
         if(data == null || start == end) {
             return;
         }
